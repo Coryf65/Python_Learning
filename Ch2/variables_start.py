@@ -18,6 +18,9 @@ print("this is a string and a , " + str(f))
 # Global vs. local variables in functions
     ## local scope, f inside the function is different the f outside
 def someFunction():
+    #can force to use the global var f, by using the global keyword
+    # we affect the variable assignment outside the function's scope
+    global f
     f = "def"
     print(f)
 
@@ -25,4 +28,7 @@ def someFunction():
 someFunction()
 print(f)
 
+# del deletes what is inside!, it undefines this var! and throws an error
 
+del f
+print(f)
