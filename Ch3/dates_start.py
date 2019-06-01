@@ -39,9 +39,6 @@ def main():
   print("getting the current time...")
   print(time)
 
-#https://www.linkedin.com/learning/learning-python-2/formatting-time-output
-
-
   
 if __name__ == "__main__":
   main()
