@@ -53,6 +53,7 @@ def main():
     # goes thru html line by line
     parser.feed(contents)
     
+  print ("%d meta tags encountered" % metacount)
 
 if __name__ == "__main__":
   main()
