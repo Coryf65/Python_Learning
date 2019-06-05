@@ -1,5 +1,9 @@
 # Python_Learning
-Following along on Linkedin Learning about python! https://www.linkedin.com/learning/learning-python-2
 
+I am learning Pyhon 3, you can follow along with me here [Linkedin Learning](https://www.linkedin.com/learning/learning-python-2)
 
-### Python 3 Docs: [link!](https://docs.python.org/3/)
+Following along on Linkedin Learning about python! 
+
+### Python 3 Docs: [link](https://docs.python.org/3/)
+
+### W3Python tutorials: [W3 Python](https://www.w3schools.com/python/)
