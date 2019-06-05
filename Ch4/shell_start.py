@@ -4,11 +4,14 @@
 import os
 from os import path
 import shutil
+#need the make archive module
+from shutil import make_archive
 
 
 def main():
 
   test_file = "textfile.txt"
+  new_test = "newfile.txt"
 
   # make a duplicate of an existing file
   if path.exists("textfile.txt"):
@@ -26,10 +29,14 @@ def main():
     shutil.copystat(source, dst)
 
     # rename the original file
-
+    os.rename(test_file, new_test)
     
     # now put things into a ZIP archive
 
+    # need to get the file path 
+    root_dir, tail = path.split(source)
+
+    shutil.make_archive("ArchiveFiles", "zip", root_dir)
 
     # more fine-grained control over ZIP files
 
