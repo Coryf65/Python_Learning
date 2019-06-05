@@ -6,6 +6,8 @@ from os import path
 import shutil
 #need the make archive module
 from shutil import make_archive
+# you can do more with this...
+from zipfile import ZipFile
 
 
 def main():
@@ -24,22 +26,25 @@ def main():
     dst = source + ".bak"
     
     # copy over the permissions, modification times, and other info
-    shutil.copy(source, dst) # this copies contents
+    #shutil.copy(source, dst) # this copies contents
     # if you want the file metadata
-    shutil.copystat(source, dst)
+    #shutil.copystat(source, dst)
 
     # rename the original file
-    os.rename(test_file, new_test)
+    #os.rename(test_file, new_test)
     
     # now put things into a ZIP archive
 
     # need to get the file path 
-    root_dir, tail = path.split(source)
+    # root_dir, tail = path.split(source)
 
-    shutil.make_archive("ArchiveFiles", "zip", root_dir)
+    # shutil.make_archive("ArchiveFiles", "zip", root_dir)
 
     # more fine-grained control over ZIP files
-
+    # more power here!
+    with ZipFile("testerzip.zip", "w") as newzip:
+      newzip.write("textfile.txt")
+      newzip.write("textfile.txt.bak")
       
 if __name__ == "__main__":
   main()
